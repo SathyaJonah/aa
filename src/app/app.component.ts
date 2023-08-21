@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
+import { CustomUpperCasePipe } from './custom-upper-case.pipe'; // Import your custom pipe
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
 })
 export class AppComponent {
-  message = 'Hi Welcome to Angular!';
+  message = 'Hello Welcome to Angular';
 
-  showMessage() {
-    alert(this.message);
-  }
+  // Register custom pipe
+  customUpperCasePipe = new CustomUpperCasePipe();
 }
-
-
